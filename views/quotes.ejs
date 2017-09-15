@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:500" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <% for (var x in errors) { %>
+            <h4>error <%= errors[x] %></h4>
+        <% } %>
+        <h2 class='bold'>
+            Quotes
+        </h2>
+        <div class='quotes'>
+        <% for (var x in quotes) { %>
+            <!-- <hr> -->
+            <h4>Quote: <%= quotes[x].quotation %></h4>
+            <h6> by <%= quotes[x].name %> @ <%= quotes[x].createdAt %> </h6>
+            <hr>
+        <% } %>
+        </div>
+        <a href='/'>
+            <button>
+                back to add quotes
+            </button>
+        </a>
+    </body>
+</html>
+

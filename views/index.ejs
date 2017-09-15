@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:500" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <% for (var x in errors) { %>
+            <h4>error <%= errors[x] %></h4>
+        <% } %>
+        <form action="/quotes" id="addquoteform" method="POST" class='classy formclass'>
+            <label for='name'>name </label>
+            <input type='text' id='name' name='name'>
+            <label for="quote">quote </label>
+            <input type='textentry' id='quote' name='quote'>
+            <input type="submit" value="post it up!">
+        </form>
+        <a href='/quotes'>
+            <button>
+                Skip to View Quotes
+            </button>
+        </a>
+    </body>
+</html>
+    
